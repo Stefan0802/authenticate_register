@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <label for="username">Login</label>
+        <input type="text" name="username">
+        <br>
+        <label for="password">password</label>
+        <input type="password" name="password">
+        <br>
+
+        <button type="submit">login</button>
+        <a href=""></a>
+        {% if error %}
+        <div>{{ error }}</div>
+        {% endif %}
+    </form>
+</body>
+</html>
